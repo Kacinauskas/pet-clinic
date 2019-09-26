@@ -18,7 +18,7 @@
 
     <groupId>com.keksas</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <name>pet-clinic</name>
     <description>Pet clinit project</description>
@@ -38,6 +38,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
                     <goals>install</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
         </plugins>
@@ -45,7 +46,7 @@
 
     <scm>
         <developerConnection>smc:git:https://github.com/Kacinauskas/pet-clinic.git</developerConnection>
-      <tag>1.0.0</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
