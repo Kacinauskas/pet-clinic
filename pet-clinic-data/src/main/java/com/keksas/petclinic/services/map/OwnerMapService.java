@@ -1,13 +1,13 @@
 package com.keksas.petclinic.services.map;
 
 import com.keksas.petclinic.model.Owner;
-import com.keksas.petclinic.services.CrudService;
+import com.keksas.petclinic.services.OwnerService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class OwnerMapService extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
@@ -34,4 +34,8 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
         super.deleteById(id);
     }
 
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
+    }
 }
