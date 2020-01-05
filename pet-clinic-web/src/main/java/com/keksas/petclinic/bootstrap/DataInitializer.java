@@ -10,23 +10,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataInitializer implements CommandLineRunner {
 
-    private final OwnerService ownerMapService;
-    private final VetService vetMapService;
+    private final OwnerService ownerService;
+    private final VetService vetService;
 
-    public DataInitializer(OwnerService ownerMapService, VetService vetMapService) {
-        this.ownerMapService = ownerMapService;
-        this.vetMapService = vetMapService;
+    public DataInitializer(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
-    public void run(String... args) {
-        ownerMapService.save(new Owner(1L, "John", "Snow"));
-        ownerMapService.save(new Owner(2L, "John", "Snow"));
+    public void run(String... args)  {
+        ownerService.save(new Owner(1L, "John", "Snow"));
+        ownerService.save(new Owner(2L, "John", "Snow"));
 
         System.out.println("Loading Owners ...");
 
-        vetMapService.save(new Vet(1L, "Alex", "Axe"));
-        vetMapService.save(new Vet(2L, "Sam", "Space"));
+        vetService.save(new Vet(1L, "Alex", "Axe"));
+        vetService.save(new Vet(2L, "Sam", "Space"));
 
         System.out.println("Loading Vets...");
     }
