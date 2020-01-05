@@ -19,14 +19,14 @@ public class DataInitializer implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args)  {
-        ownerService.save(new Owner(1L, "John", "Snow"));
-        ownerService.save(new Owner(2L, "John", "Snow"));
+    public void run(String... args) {
+        ownerService.save(new Owner("John", "Snow"));
+        ownerService.save(new Owner("John", "Snow"));
 
         System.out.println("Loading Owners ...");
 
-        vetService.save(new Vet(1L, "Alex", "Axe"));
-        vetService.save(new Vet(2L, "Sam", "Space"));
+        vetService.save(new Vet("Alex", "Axe"));
+        vetService.save(new Vet("Sam", "Space"));
 
         System.out.println("Loading Vets...");
     }
